@@ -1,4 +1,69 @@
----
----
-
 @import "minimal-light";
+
+/* ─── Global & Wrapper ───────────────────────────── */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ─── Header: Avatar Left, Info Right ───────────── */
+header .profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+header .avatar img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+header .profile-info h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+header .profile-info .position {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+header .profile-info .affiliation a {
+  color: #0066cc;
+  text-decoration: none;
+}
+header .profile-info .affiliation a:hover {
+  text-decoration: underline;
+}
+header .profile-info .affiliation,
+header .profile-info .email {
+  margin: 4px 0;
+}
+
+/* ─── Sections & Lists ───────────────────────────── */
+section h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+section ul,
+section ol {
+  margin: 0 0 20px 20px;
+  padding: 0;
+}
+section ul li,
+section ol li {
+  margin-bottom: 8px;
+}
