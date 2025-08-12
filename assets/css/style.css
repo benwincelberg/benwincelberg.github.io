@@ -1,5 +1,3 @@
-@import "minimal-light";
-
 /* ─── Global & Wrapper ───────────────────────────── */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -9,18 +7,23 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* This is the critical rule for centering your content */
 .wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 800px; /* Sets a maximum width for your content */
+  margin: 0 auto;   /* Automatically calculates left/right margins to center it */
+  padding: 40px 20px; /* Adds some space on the top/bottom and sides */
 }
 
 /* ─── Header: Avatar Left, Info Right ───────────── */
+header {
+  margin-bottom: 40px;
+}
 header .profile {
   display: flex;
-  align-items: flex-start;
+  justify-content: center; /* This is the key change to center the items horizontally */
+  align-items: center;    /* This vertically aligns the avatar and text nicely */
   gap: 20px;
-  margin-bottom: 40px;
 }
 header .avatar img {
   width: 120px;
@@ -53,6 +56,8 @@ section h2 {
   font-size: 1.5rem;
   margin-top: 40px;
   margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 section {
   text-align: left;
@@ -60,8 +65,7 @@ section {
 }
 section ul,
 section ol {
-  margin: 0 0 20px 20px;
-  padding: 0;
+  padding-left: 20px; /* Use padding for lists, not margin */
 }
 section ul li,
 section ol li {
