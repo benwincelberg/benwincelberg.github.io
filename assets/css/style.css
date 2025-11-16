@@ -1,44 +1,53 @@
 /* ─── Global & Wrapper ───────────────────────────── */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: #fafafa;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* This is the critical rule for centering your content */
+/* Main centered column */
 .wrapper {
-  max-width: 800px; /* Sets a maximum width for your content */
-  margin: 0 auto;   /* Automatically calculates left/right margins to center it */
-  padding: 40px 20px; /* Adds some space on the top/bottom and sides */
+  max-width: 900px;           /* slightly wider than before */
+  margin: 0 auto;
+  padding: 32px 20px;         /* a bit less top/bottom padding */
 }
 
-/* ─── Header: Avatar Left, Info Right ───────────── */
+/* ─── Header: Avatar + Info ─────────────────────── */
 header {
-  margin-bottom: 40px;
+  margin-bottom: 28px;        /* was 40px */
 }
+
 header .profile {
   display: flex;
-  justify-content: center; /* This is the key change to center the items horizontally */
-  align-items: center;    /* This vertically aligns the avatar and text nicely */
-  gap: 20px;
+  justify-content: center;    /* centers avatar + text block as a unit */
+  align-items: center;
+  gap: 16px;                  /* slightly tighter gap */
 }
+
 header .avatar img {
-  width: 120px;
+  width: 90px;                /* smaller avatar (was 120px) */
   height: auto;
   border-radius: 50%;
   display: block;
 }
+
+header .profile-info {
+  text-align: center;         /* center name, position, affiliation, email */
+}
+
 header .profile-info h1 {
   font-size: 2rem;
+  margin: 0 0 6px;
+}
+
+header .profile-info .position {
+  font-size: 1.05rem;
   margin: 0 0 8px;
 }
-header .profile-info .position {
-  font-size: 1.1rem;
-  margin: 0 0 12px;
-}
+
 header .profile-info .affiliation a {
   color: #0066cc;
   text-decoration: none;
@@ -46,28 +55,63 @@ header .profile-info .affiliation a {
 header .profile-info .affiliation a:hover {
   text-decoration: underline;
 }
+
 header .profile-info .affiliation,
 header .profile-info .email {
-  margin: 4px 0;
+  margin: 3px 0;
 }
 
 /* ─── Sections & Lists ───────────────────────────── */
-section h2 {
-  font-size: 1.5rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-}
 section {
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 24px;        /* was 40px */
 }
+
+/* Section headings */
+section h2 {
+  font-size: 1.4rem;
+  margin-top: 24px;           /* was 40px */
+  margin-bottom: 12px;        /* was 20px */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;        /* was 10px */
+}
+
+/* Lists */
 section ul,
 section ol {
-  padding-left: 20px; /* Use padding for lists, not margin */
+  padding-left: 20px;
 }
+
 section ul li,
 section ol li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;         /* was 8px */
+}
+
+/* Slightly tighter for publication lists specifically */
+.working-papers ol li,
+.in-progress ul li {
+  margin-bottom: 4px;
+}
+
+.pub-row {
+  margin-bottom: 2px;         /* very small gap between title/author/periodical */
+}
+
+.pub-row .title a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #004b91;
+}
+.pub-row .title a:hover {
+  text-decoration: underline;
+}
+
+.author {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.periodical {
+  font-size: 0.95rem;
+  color: #666;
 }
