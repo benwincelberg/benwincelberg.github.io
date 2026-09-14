@@ -158,3 +158,43 @@ section p {
     font-size: 1.18rem;
   }
 }
+
+.periodical {
+  color: #3f4844;
+}
+
+.periodical strong {
+  color: #2f3432;
+}
+
+/* Paper title and badge: wrap neatly on small screens */
+.jmp-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 12px;
+}
+
+/* Shared badge styling */
+.jmp-badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.5;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Option 1: filled teal */
+.jmp-teal {
+  background-color: #275f73;
+  color: #ffffff;
+}
+
+/* Option 2: soft gold */
+.jmp-gold {
+  background-color: #f0dfb4;
+  color: #624715;
+}
