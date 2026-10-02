@@ -198,3 +198,30 @@ section p {
   background-color: #f0dfb4;
   color: #624715;
 }
+
+
+/* Short paper descriptions */
+.pub-row .paper-summary {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #2f3432;
+}
+
+/* Space between paper entries */
+.working-papers ol li,
+.in-progress ul li {
+  margin-bottom: 22px;
+}
+
+.pub-row .paper-summary {
+  position: relative;
+  padding-left: 14px;
+}
+
+.pub-row .paper-summary::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #555f5b;
+}
